@@ -6,11 +6,12 @@ $base-font-size:		16px;
 
 $white:							#FFFFFF;
 $blue:							#406180;
-$red:								#672B3C;
+$red:								#F4511E;
 $green:							#85A699;
 $orange:						#FDA56C;
-$grey:							lighten($white,20);
-$black:							#424243;
+$grey:							darken($white,2);
+$liz-green:					#62E0CE;
+$black:							#000;
 
 $default-hover:			$blue;
 
@@ -20,7 +21,6 @@ $landscape:					600px;
 $mobile:						420px;
 $mobile-xs:					320px;
 
-$font-head:					sans-serif;
-$font-head-weight:	600;
-$font-body:    	 		serif;
-$font-body-weight:	100;
+$font-head:					'Work Sans', sans-serif;
+$font-subhead:			'Oswald', sans-serif;
+$font-body:    	 		'Work Sans', sans-serif;

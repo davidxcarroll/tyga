@@ -15,9 +15,6 @@ html {
 /**
  * Remove default margin.
  */
-body {
-  margin: 0; }
-
 /* HTML5 display definitions
    ========================================================================== */
 /**
@@ -106,14 +103,6 @@ strong {
  */
 dfn {
   font-style: italic; }
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
 
 /**
  * Address styling not present in IE 8/9.
@@ -520,8 +509,7 @@ h5,
 h6 {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
-  line-height: 1.2;
-  margin: 0 0 0.75em; }
+  line-height: 1.2; }
 
 p {
   margin: 0 0 0.75em; }
@@ -571,22 +559,25 @@ picture {
 .margin-big-right {
   margin-right: 2em; }
 
+body {
+  color: #000;
+  font-size: 16px;
+  font-family: "Work Sans", sans-serif; }
+
 *,
 a {
   transition: all .15s ease-in-out; }
 
 body {
-  color: #424243; }
+  color: #000; }
 
-body,
-h1, h2, h3, h4, h5, h6
 label,
 input,
 input[type="text"],
 textarea,
 button,
 input[type="submit"] {
-  font-family: sans-serif; }
+  font-family: "Work Sans", sans-serif; }
 
 a {
   color: #406180; }
@@ -595,13 +586,84 @@ a {
   a:focus {
     outline: none; }
 
-@media screen and (min-width: 1100px) {
-  .outer {
-    padding: 4em 0 6em; } }
+.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 {
+  font-family: "Work Sans", sans-serif; }
 
-@media screen and (max-width: 1100px) {
-  .outer {
-    padding: 2em 0 3em; } }
+.h1, h1, .h2, h2 {
+  line-height: 1; }
+
+.h3, h3, .h4, h4 {
+  line-height: 1.2; }
+
+.h2, h2 {
+  margin-bottom: 0.2em; }
+
+.h6, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .2em; }
+
+@media screen and (min-width: 768px) {
+  .h1, h1 {
+    font-size: 4em; }
+  .h2, h2 {
+    font-size: 2.5em; }
+  .h3, h3 {
+    font-size: 2em; }
+  .h4, h4 {
+    font-size: 1.8em; }
+  .h5, h5 {
+    font-size: 1.4em; } }
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .h1, h1 {
+    font-size: 3em; }
+  .h2, h2 {
+    font-size: 2.2em; }
+  .h3, h3 {
+    font-size: 1.8em; }
+  .h4, h4 {
+    font-size: 1.4em; }
+  .h5, h5 {
+    font-size: 1.3em; } }
+
+@media screen and (max-width: 600px) and (min-width: 420px) {
+  .h1, h1 {
+    font-size: 2.4em; }
+  .h2, h2 {
+    font-size: 2em; }
+  .h3, h3 {
+    font-size: 1.8em; }
+  .h4, h4 {
+    font-size: 1.5em; }
+  .h5, h5 {
+    font-size: 1.3em; } }
+
+@media screen and (max-width: 420px) and (min-width: 320px) {
+  .h1, h1 {
+    font-size: 2.2em; }
+  .h2, h2 {
+    font-size: 1.8em; }
+  .h3, h3 {
+    font-size: 1.4em; }
+  .h4, h4 {
+    font-size: 1.3em; }
+  .h5, h5 {
+    font-size: 1.2em; } }
+
+@media screen and (max-width: 320px) {
+  .h1, h1 {
+    font-size: 2em; }
+  .h2, h2 {
+    font-size: 1.4em; }
+  .h3, h3 {
+    font-size: 1.2em; }
+  .h4, h4 {
+    font-size: 1.15em; }
+  .h5, h5 {
+    font-size: 1.05em; } }
 
 .inner {
   max-width: 68em;
@@ -611,10 +673,136 @@ a {
     clear: both;
     content: "";
     display: table; }
-  @media screen and (max-width: 1100px) and (min-width: 420px) {
+  @media screen and (min-width: 420px) {
     .inner {
       width: 100%;
-      padding: 2em; } }
+      padding: 3em 2em; } }
   @media screen and (max-width: 420px) {
     .inner {
       padding: 1em; } }
+
+body {
+  background: #fafafa; }
+  @media screen and (min-width: 768px) {
+    body {
+      margin: 2em; } }
+  @media screen and (max-width: 768px) {
+    body {
+      margin: 1em; } }
+
+.hero {
+  text-align: center; }
+
+.company {
+  margin-bottom: 2em;
+  background: #FFFFFF;
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.15); }
+  @media screen and (max-width: 1140px) {
+    .company {
+      text-align: center; } }
+  @media screen and (min-width: 1140px) {
+    .company {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%;
+      margin-bottom: 4em; }
+      .company:last-child {
+        margin-right: 0; } }
+
+@media screen and (min-width: 1140px) {
+  .company-logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .company-logo:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 1140px) and (min-width: 768px) {
+  .company-logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 34.11922%; }
+    .company-logo:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .company-logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    .company-logo:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 600px) and (min-width: 420px) {
+  .company-logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%; }
+    .company-logo:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 420px) {
+  .company-logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%; }
+    .company-logo:last-child {
+      margin-right: 0; } }
+
+@media screen and (min-width: 1140px) {
+  .company-content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+    margin-left: 8.5298%; }
+    .company-content:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 1140px) and (min-width: 768px) {
+  .company-content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%; }
+    .company-content:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 768px) and (min-width: 420px) {
+  .company-content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%; }
+    .company-content:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 420px) {
+  .company-content {
+    width: 100%; } }
+
+.company-title {
+  margin-bottom: 2em; }
+
+.company-1 .company-border {
+  height: .4em;
+  background-color: #62E0CE;
+  background: linear-gradient(45deg, #62dde0, #62e0b9); }
+
+.company-2 .company-border {
+  height: .4em;
+  background-color: #F4511E;
+  background: linear-gradient(45deg, #f4751e, #f42d1e); }

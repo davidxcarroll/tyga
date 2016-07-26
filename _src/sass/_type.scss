@@ -2,7 +2,6 @@ body {
   color: $black;
   font-size: $base-font-size;
   font-family: $font-body;
-  font-weight: $font-body-weight;
 }
 
 *,
@@ -17,7 +16,6 @@ textarea,
 button,
 input[type="submit"] {
   font-family: $font-body;
-  font-weight: $font-body-weight;
 }
 
 a {
@@ -26,9 +24,20 @@ a {
   &:focus { outline: none; }
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6 { font-family: $font-head; font-weight: $font-head-weight; }
+.h1, .h2, .h3, .h4, .h5, .h6 { font-family: $font-head; }
 .h1, .h2 { line-height: 1; }
 .h3, .h4 { line-height: 1.2; }
+
+.h2 {
+  @include margin(null null .2em);
+}
+
+.h6 {
+  @include margin(0 null);
+  font-family: $font-subhead;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
 
 @include media(min-width $tablet) {
   .h1 { font-size: 4em; }
