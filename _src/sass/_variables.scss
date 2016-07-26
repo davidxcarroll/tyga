@@ -1,0 +1,26 @@
+
+// VARIABLES
+// ============================================================
+
+$base-font-size:		16px;
+
+$white:							#FFFFFF;
+$blue:							#406180;
+$red:								#672B3C;
+$green:							#85A699;
+$orange:						#FDA56C;
+$grey:							lighten($white,20);
+$black:							#424243;
+
+$default-hover:			$blue;
+
+$desktop:						1140px;
+$tablet:						768px;
+$landscape:					600px;
+$mobile:						420px;
+$mobile-xs:					320px;
+
+$font-head:					sans-serif;
+$font-head-weight:	600;
+$font-body:    	 		serif;
+$font-body-weight:	100;
