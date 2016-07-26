@@ -691,7 +691,13 @@ body {
       margin: 1em; } }
 
 .hero {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
   text-align: center; }
+  .hero:last-child {
+    margin-right: 0; }
 
 .company {
   margin-bottom: 2em;
@@ -797,12 +803,21 @@ body {
 .company-title {
   margin-bottom: 2em; }
 
-.company-1 .company-border {
+.company-liz_caribbean .company-border {
   height: .4em;
   background-color: #62E0CE;
   background: linear-gradient(45deg, #62dde0, #62e0b9); }
 
-.company-2 .company-border {
+.company-black_eagle .company-border {
   height: .4em;
   background-color: #F4511E;
   background: linear-gradient(45deg, #f4751e, #f42d1e); }
+
+.footer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: center; }
+  .footer:last-child {
+    margin-right: 0; }

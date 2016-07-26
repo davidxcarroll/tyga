@@ -28,6 +28,7 @@ body {
 }
 
 .hero {
+	@include span-columns(12);
 	text-align: center;
 }
 
@@ -89,15 +90,20 @@ body {
 	@include margin(null null 2em);
 }
 
-.company-1 {
+.company-liz_caribbean {
 	.company-border {
 		@include company-card($liz-green);
 	}
 }
 
-.company-2 {
+.company-black_eagle {
 	.company-border {
 		@include company-card($red);
 	}
+}
+
+.footer {
+	@include span-columns(12);
+	text-align: center;
 }
 
