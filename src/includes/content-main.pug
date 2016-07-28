@@ -1,0 +1,48 @@
+
+//- DECLARATION
+
+mixin company(class, name, description, summary)
+	div.content.company.company- + class
+		div.company-border
+		div.company-logo
+			img(src="../img/logo- + class.svg")
+		div.company-content
+			div.company-title
+				h2= name
+				h6= description
+			div.company-body
+				p= summary
+
+//- USE
+
+//- div.outer
+//- 	div.inner
+//- 		+company(black_eagle, "Black Eagle Protection", "Security Services", "Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum.")
+//- 		+company(liz_caribbean, "Liz Caribbean", "Night Club &amp; Restaurant", "Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum.")
+
+//- NON MIXIN
+
+div.outer
+	div.inner
+		div.content.company.company-black_eagle
+			div.company-border
+			div.company-logo
+				img(src="../img/logo-black_eagle.svg")
+			div.company-content
+				div.company-title
+					h2 Black Eagle Protection
+					h6 Security Services
+				div.company-body
+					p.
+						Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum.
+		div.content.company.company-liz_caribbean
+			div.company-border
+			div.company-logo
+				img(src="../img/logo-liz_caribbean.svg")
+			div.company-content
+				div.company-title
+					h2 Liz Caribbean
+					h6 Night Club &amp; Restaurant
+				div.company-body
+					p.
+						Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum.

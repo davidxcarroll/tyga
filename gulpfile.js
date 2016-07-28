@@ -1,40 +1,54 @@
 
+var gulp = require('gulp')
+
 // SASS
 // ============================================================
 
-var gulp = require('gulp'),
-		sass = require('gulp-sass');
+var sass = require('gulp-sass');
 
 gulp.task('sass', function() {
-    gulp.src('_src/sass/**/*.scss')
+    gulp.src('src/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./_public/static/_css'));
+        .pipe(gulp.dest('./public/css'));
+});
+
+// PUG
+// ============================================================
+
+var pug = require('gulp-pug');
+
+gulp.task('pug', function() {
+  gulp.src('./src/**/*.pug')
+  .pipe(pug({
+    pretty: true
+  }))
+  .pipe(gulp.dest('./public'))
 });
 
 // WATCH
 // ============================================================
 
-gulp.task('watch', function () {
-  gulp.watch(['./_public/static/*.html'], ['html']),
-  gulp.watch(['./_src/sass/**/*.scss'],['sass']);
+gulp.task('watch', function() {
+  gulp.watch(['./src/**/*.pug'], ['pug']),
+  gulp.watch(['./src/sass/**/*.scss'],['sass']);
 });
 
 // LIVE RELOAD
 // ============================================================
  
-var gulp = require('gulp'),
-  connect = require('gulp-connect');
+var connect = require('gulp-connect');
 
 gulp.task('connect', function() {
   connect.server({
-    root: '_public/static',
+    root: './public',
     livereload: true
   });
 });
 
 gulp.task('html', function () {
-  gulp.src('./_public/static/*.html')
+  gulp.src('./public/*.html')
     .pipe(connect.reload());
 });
  
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['connect', 'watch', 'pug']);
+

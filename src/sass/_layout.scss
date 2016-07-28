@@ -1,0 +1,127 @@
+
+// STRUCTURE
+// ============================================================
+
+.outer {}
+.inner {
+	@include outer-container;
+	@include media(min-width $mobile) {
+		// @include fill-parent;
+		// @include pad(3em 2em);
+	}
+	@include media(max-width $mobile) {
+		// @include pad(1em);
+	}
+}
+
+// SECTIONS
+// ============================================================
+
+body {
+	background: $grey;
+	@include media(min-width $tablet) {
+		margin: 2em;
+	}
+	@include media(max-width $tablet) {
+		margin: 1em;
+	}
+}
+
+.masthead {
+	.content-masthead {
+		@include media(min-width $landscape) {
+			@include span-columns(8);
+			@include shift(2);
+			@include margin(null null 2em);
+		}
+		@include media(max-width $landscape) {
+			@include span-columns(12);
+			@include margin(null null 1em);
+		}
+	}
+}
+
+.company {
+	text-align: center;
+	@include media(min-width $desktop) {
+		@include span-columns(6);
+		@include omega(2n);
+		@include margin(null null 4em);
+	}
+	@include media(max-width $desktop min-width $landscape) {
+		@include span-columns(8);
+		@include shift(2);
+		@include margin(null null 2em);
+	}
+	@include media(max-width $landscape min-width $mobile) {
+		@include span-columns(10);
+		@include shift(1);
+		@include margin(null null 2em);
+	}
+	@include media(max-width $mobile) {
+		@include span-columns(12);
+		@include margin(null null 2em);
+	}
+	background: $white;
+	box-shadow: 0 .2em 1em rgba(0,0,0,.15);
+}
+
+.company-logo {
+	img {
+		max-width: 20em;
+		max-height: 12em;
+	}
+	// SPACING
+	@include media(min-width $mobile) {
+			@include pad(2em 2em 0);
+	}
+	@include media(max-width $mobile) {
+			@include pad(1em 0 0);
+	}
+	// WIDTH ETC
+	@include media(min-width $landscape) {
+		@include span-columns(8);
+		@include shift(2);
+	}
+}
+
+.company-content {
+	// SPACING
+	@include media(min-width $mobile-xs) {
+			@include pad(0 2em 2em);
+	}
+	@include media(max-width $mobile-xs) {
+			@include pad(0 1em 2em);
+	}
+	@include span-columns(12);
+}
+
+.company-title {
+	@include media(min-width $desktop) {
+		@include margin(2em null 1.4em);
+	}
+	@include media(max-width $desktop) {
+		@include margin(1em null 1.4em);
+	}
+}
+
+.company-liz_caribbean {
+	.company-border {
+		@include company-card($green);
+	}
+}
+
+.company-black_eagle {
+	.company-border {
+		@include company-card($red);
+	}
+}
+
+.footer {
+	text-align: center;
+	.content-footer {
+		@include span-columns(12);
+		@include omega;
+	}
+}
+
